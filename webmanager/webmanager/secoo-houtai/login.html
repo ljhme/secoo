@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寺库后台-登录</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+<div class="top_1">
+    <span>寺库 联营商家中心</span>
+    <span>咨询电话：400-658-6659</span>
+</div>
+<div class="body_1">
+    <div class="bd_2"></div>
+    <div class="bd_3"></div>
+    <div class="bd_4"></div>
+    <div class="bd_5"></div>
+    <div class="bd_6"></div>
+    <div class="bd_7"></div>
+    <div class="bd_8"></div>
+    <div class="bd_9"></div>
+    <div class="bd_10"></div>
+    <div class="bd_11"></div>
+    <div class="bd_12"></div>
+    <div class="bd_13"></div>
+    <div class="bd_14"></div>
+    <div class="bd_15"></div>
+
+    <div class="border_pos"></div>
+    <div class="login_box">
+        <div class="logo_png"><a href="login.html"><img src="images/index_logo.png" /></a></div>
+        <div class="login_inbox">
+            <div class="login_inbox_hd"></div>
+
+            <div class="login_inbox_bd">
+                <img src="images/login_1.jpg" />
+                <form id="loginForm">
+                    <input type="hidden" name="redirectUrl" id="redirectUrl" value="http://sop.secoo.com/cooperator/"/>
+                    <div class='index_bord'><span class="nam_span">商家编号：</span><input name="vendorCode" type='text' id="vendorCode" /></div>
+                    <div class='index_bord'><span class="nam_span">用 户 名：</span><input name="userName"  type="text"  id="userName" /></div>
+                    <div class='index_bord'><span class="nam_span">登录密码：</span><input name="password"  type="password" id="password" /></div>
+                    <div class='index_bord2'>
+                        <span class="nam_span">验 证 码：</span>
+                        <input name="randomCode" id="randomCode" class="yzmText" type='text' maxlength="10" value=""/>
+                        <img  src="images/randomcodeservlet.jpg"  id="img" style='vertical-align:bottom; margin-right:5px;' width="105" height="35" onclick="changeVImage('img')" title="点击这里刷新" />
+                        <a href="javascript:changeVImage('img');">换一换</a>
+                    </div>
+                    <a href="javascript:loginAjax()" class="ljdr_button">立即登录</a>
+                </form>
+            </div>
+
+            <div class="login_inbox_ft"></div>
+        </div>
+    </div>
+</div>
+<div class="footDiv">
+    <span>Copyright©2009-2012</span>
+    <span>SECOO寺库中国</span>
+</div>
+
+
+
+
+</body>
+</html>

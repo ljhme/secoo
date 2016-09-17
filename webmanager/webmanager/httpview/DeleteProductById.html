@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过ID删除单个商品</title>
+    <script src="../Scripts/jquery-1.8.2.js"></script>
+</head>
+<body>
+<div id="div1">
+    <div>
+        标示：<input type="text" id="txtid" />
+    </div>
+    <div><input type="button" id="bt1" value="提交" /></div>
+</div>
+<script>
+
+    //删除单个商品
+
+    //先获取该商品，看有没有
+
+    $("#bt1").click(function () {
+        //ajax;
+        var ajaxUrl = "../product/DeleteProductById_get";
+        var ajaxId = $("#txtid").val();
+
+        $.ajax({
+            url: ajaxUrl,
+            data: {
+                id: ajaxId,
+            },
+            success:function (returnData) {
+                if(returnData==1){
+                    console.log("删除成功！");
+                }else{
+                    console.log("删除失败！");
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

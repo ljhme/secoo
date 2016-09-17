@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页获取多个商品</title>
+    <script src="../Scripts/jquery-1.8.2.js"></script>
+</head>
+<body>
+<div id="div1">
+    <div>
+        页面显示大小：<input type="text" id="txtsize" />
+        页面显示页数：<input type="text" id="txtindex" />
+    </div>
+    <div><input type="button" id="bt1" value="获取信息" /></div>
+</div>
+<script>
+
+    //通过分页获取多个商品信息
+
+    $("#bt1").click(function () {
+        //ajax;
+        var ajaxUrl = "../product/GetProductsByPage_get";
+        var ajaxPageSize = $("#txtsize").val();
+        var ajaxPageIndex = $("#txtindex").val();
+
+        $.ajax({
+            url: ajaxUrl,
+            data: {
+                pagesize:ajaxPageSize,
+                pageindex:ajaxPageIndex
+            },
+            success:function (returnData) {   //jQuery关于ajax返回获取值的回调函数
+                console.log(returnData);
+                console.log(typeof(returnData));  //string,需要转换成对象
+                //参数returnData的值：
+                // /[{"Id":"11","Data":"{\"id\":\"11\",\"name\":\"gao\",\"price\":\"12\",\"imgSrc\":\"1.jpg\"}"},
+                // {"Id":"1","Data":"1231312123"},
+                // {"Id":"100","Data":"{\"id\":\"100\",\"name\":\"100\",\"price\":\"100\",\"imgsrc\":\"100.jpg\"}"}]
+
+                var jsonData = JSON.parse(returnData);  //转换为json对象
+                console.log(jsonData);   //[Object, Object, Object]
+                for(var i=0;i<jsonData.length;i++){
+                    console.log(jsonData[i].Id);
+                    var data = jsonData[i].Data;
+                    console.log(data);    //{"id":"11","name":"gao","price":"12","imgSrc":"1.jpg"}
+                    console.log(typeof(data));  //string,需要转换成为对象
+                    var datas = JSON.parse(data);  //转换为对象
+                    console.log(datas.id+"-----"+datas.name+"----"+datas.price);
+                }
+            }
+        });
+    });
+    function dw(param) {
+        document.writeln(param);
+    }
+</script>
+</body>
+</html>

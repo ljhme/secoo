@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增或者修改商品</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/CreateUpdateProduct.css">
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+<div class="dangqian">
+    <span class="home"></span><p>当前的位置>>商品管理>>添加商品>>商品信息</p>
+</div>
+<div id="div1">
+
+    <div>
+        商品编号：<label id="productsId"></label>
+    </div>
+    <div>
+        商品名称：<input type="text" id="productName" />
+    </div>
+    <div>
+        商品价格：<input type="text" id="productPrice" />
+    </div>
+    <div>
+        图片全称：<input type="text" id="productImg" />
+    </div>
+    <div>
+        商品标记：<input type="text" id="productFlag" />
+    </div>
+    <div>
+        商品描述：<br/><textarea id="productDescribe"  cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        详情大图  ：<input type="text" id="detLargeImg" />
+    </div>
+    <div>
+        促销信息  ：<input type="text" id="saleMes" />
+    </div>
+    <div>
+        大图细图1：<input type="text" id="largeImgDel01" />
+    </div>
+    <div>
+        大图细图2：<input type="text" id="largeImgDel02" />
+    </div>
+    <div>
+        大图细图3：<input type="text" id="largeImgDel03" />
+    </div>
+    <div>
+        大图细图4：<input type="text" id="largeImgDel04" />
+    </div>
+    <div>
+        大图细图5：<input type="text" id="largeImgDel05" />
+    </div>
+    <div>
+        产品颜色  ：<input type="text" id="proColor" />
+    </div>
+    <div><input type="button" id="addPBtn" value="添加" /></div>
+    <div><input type="button" id="updatePBtn" value="修改" /></div>
+    <div id="tishi"></div>
+</div>
+
+
+<script>
+    $("#addPBtn").attr({"disabled":"disabled"}).css({"background":"none","border-color":"red","cursor":"none"});
+    function UrlSearch()
+    {
+        var name,value;
+        var str=location.href; //取得地址栏的url
+        var num=str.indexOf("?");  //？ 的位置
+        str=str.substr(num+1); //取得所有参数  获取？后面的url内容。
+        var arr=str.split("&"); //各个参数放到数组里  ["pid=1"]
+        for(var i=0;i < arr.length;i++){
+            num=arr[i].indexOf("=");
+            if(num>0){
+                name=arr[i].substring(0,num);
+                value=arr[i].substr(num+1);
+                this[name]=value;
+            }
+        }
+    }
+    var request=new UrlSearch(); //实例化
+    var pid=request.id;  //商品Id
+    //console.log(pid);
+    //ajax;
+    var ajaxUrl = "../product/GetProductById_get";
+    var ajaxId = pid;
+
+    $.ajax({
+        url: ajaxUrl,
+        data: {
+            id: ajaxId,
+        },
+        success:function (returnData) {   //jQuery关于ajax返回获取值的回调函数
+            console.log(returnData);   //参数returnData的值(string类型)：{"Id":"100","Data":"{\"id\":\"100\",\"name\":\"100\",\"price\":\"100\",\"imgsrc\":\"100.jpg\"}"}
+            //var jsonData = JSON.parse(returnData);   //将值转换成json对象
+            //console.log(jsonData);    //Object {Id: "100", Data: "{"id":"100","name":"100","price":"100","imgsrc":"100.jpg"}"}
+            //console.log(jsonData.Id);  //获取所得值的Id值
+
+            var data = returnData.Data;   //string类型，需要转换成对象
+            //console.log(data); //{"id":"1212","name":"上衣","price":"230","imgsrc":"123.jpg"}   ,字符串
+            var datas = JSON.parse(data);  //转换为json对象
+            //console.log(datas);  //Object {id: "100", name: "100", price: "100", imgsrc: "100.jpg"}
+            //console.log(datas.id);  //100
+            //console.log(datas.name);  //100
+            //console.log(datas.price); //100
+            $("#productsId").text(datas.id);
+            $("#productName").val(datas.name);
+            $("#productPrice").val(datas.price);
+            $("#productImg").val(datas.imgsrc);
+            $("#productDescribe").val(datas.describe);
+            $("#productFlag").val(datas.flag);
+            $("#detLargeImg").val(datas.largerimg);
+            $("#largeImgDel01").val(datas.larger01);
+            $("#largeImgDel02").val(datas.larger02);
+            $("#largeImgDel03").val(datas.larger03);
+            $("#largeImgDel04").val(datas.larger04);
+            $("#largeImgDel05").val(datas.larger05);
+            $("#proColor").val(datas.procolor);
+        },
+        dataType:"json",
+    });
+
+
+    $("#updatePBtn").click(function () {
+        //ajax;
+        var ajaxurl = "../product/CreateUpdateProduct_get";
+        var ajaxId = $("#productsId").text();
+        var ajaxDataJson = {
+            id: ajaxId,
+            name: $("#productName").val(),
+            price: $("#productPrice").val(),
+            imgsrc:$("#productImg").val(),
+            describe:$("#productDescribe").val(),
+            flag:$("#productFlag").val(),
+            largerimg:$("#detLargeImg").val(),
+            salemes:$("#saleMes").val(),
+            larger01:$("#largeImgDel01").val(),
+            larger02:$("#largeImgDel02").val(),
+            larger03:$("#largeImgDel03").val(),
+            larger04:$("#largeImgDel04").val(),
+            larger05:$("#largeImgDel05").val(),
+            procolor:$("#proColor").val()
+        }
+
+        var dataStr = JSON.stringify(ajaxDataJson); //将对象转换为string类型
+        console.log(typeof(dataStr));   //string
+
+
+        $.ajax({   //启动一个ajax
+            url: ajaxurl,
+            data: {
+                id: ajaxId,
+                datajson: dataStr
+            },
+            success:function (returnData) {
+                if(returnData==1){
+                    $("#tishi").text("修改成功！");
+                }else{
+                    $("#tishi").text("修改失败！");
+                }
+            }
+        });
+    })
+
+
+
+</script>
+</body>
+</html>

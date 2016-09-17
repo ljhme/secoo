@@ -1,0 +1,444 @@
+@charset "utf-8";
+/*------------public--------------*/
+* {margin: 0;outline: 0;padding: 0;}
+body {font-family: "Microsoft Yahei";font-size:12px;margin: 0;padding: 0;}
+body, form, ul, ol, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, table, fieldset, hr, div {margin: 0;padding: 0;}
+img {border: 0 none;max-width:100%;}
+ul, ol, li {list-style-type: none;}
+:focus { outline: none; }
+a {outline: medium none;text-decoration: none;}
+a:hover {text-decoration: none;}
+i,em {font-style: normal;}
+input{border:0}
+b,strong{font-weight: normal}
+/*-----------------字体粗细--------------------*/
+.fw-bold{
+    font-weight: bold;
+}
+.fw-500{
+    font-weight:500;
+}
+/*-----------------浮动定位--------------------*/
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.pa{
+    position: absolute;
+}
+.pr{
+    position: relative;
+}
+/*-----------------背景颜色--------------------*/
+.bg-fff{
+    background: #FFFFFF;
+}
+.bg-136e97{
+    background: #136e97;
+}
+.bg-f0f0f0{
+    background:#f0f0f0;
+}
+/*-----------------字体颜色--------------------*/
+.c-fff{ color:#fff}
+.c-136e97{ color:#136e97}
+.c-8e8e8e{ color:#8e8e8e}
+.c-595757{ color:#595757}
+.c-888686{ color:#888686}
+.c-3e3a39{ color:#3e3a39}
+.c-666{ color:#666}
+.c-333{ color:#333}
+/*-----------------边框颜色--------------------*/
+.b-dcdddd{ border:1px solid #dcdddd}
+.b-888984{ border:1px solid #888984}
+.b-136e97{ border:1px solid #136e97}
+.b-dcdddd{ border:1px dashed #dcdddd}
+.bb-bebebe{border-bottom:1px solid #bebebe}
+.br-3f6b7f{ border-right:1px solid #3f6b7f}
+.bb-2b4b5b{ border-bottom:1px solid #2b4b5b}
+.bb-dcdddd{ border-bottom:1px dashed #dcdddd}
+.br5{ border-radius:5px;}
+.br3{ border-radius:3px;}
+/*-----------------水平垂直对齐--------------------*/
+.tl {text-align: left;}
+.tr {text-align: right;}
+.tc {text-align: center;}
+.tin-2{ text-indent:2em}
+.vt {vertical-align: top;}
+.vm {vertical-align: middle;}
+.vb {vertical-align: bottom;}
+.of-h{overflow: hidden;}
+.cur-po{cursor: pointer;}
+/*-----------------转换元素--------------------*/
+.dis-n {display: none;}
+.dis-b {display: block;}
+.dis-ib{display: inline-block;}
+/*-----------------宽高--------------------*/
+.wp-100 {width: 100%;}
+.wp-50{width: 50%;}
+.w-400{ width:400px;}
+.w-300{ width:300px;}
+.w-800{ width:800px;}
+.w-200{ width:200px;}
+.w-140{ width:140px;}
+.w-50{ width:50px;}
+.hp-100{ height:100%}
+.h-80{ height:80px;}
+/*-------------------- 边距 --------------------*/
+.mp-2{ margin:2%}
+.m0-mp2{ margin:0 2%}
+.pb-70{ padding-bottom:70px;}
+
+
+
+/*-------------header------------------*/
+.logo{
+    display:block;
+    width:42px;
+    height:100px;
+    background: url(../images/secoo_logo.png);
+    margin:18px 18px 18px 0;
+}
+.logoRightGif{
+    width:120px;
+    height:100px;
+    margin:18px;
+    background: url(../images/logoRight.gif);
+}
+.logoCenter{
+    width:820px;
+}
+.Search{
+    width:416px;
+    height:35px;
+    border:3px solid #5b4f9d;
+    margin:30px 0 10px 28px;
+    padding:1px 0 0 4px;
+}
+.searchTxt{
+    width:412px;
+    height:31px;
+    font-size:12px;
+    color:#999;
+}
+.searchBtn{
+    width:69px;
+    height:42px;
+    background:#5b4f9d;
+    color:#fff;
+    line-height:42px;
+    text-align: center;
+    margin-top:30px;
+}
+.searchLink{
+    margin:0 0 30px 28px;
+    clear: both;
+}
+.searchLink li{
+    float: left;
+    margin-right:20px;
+}
+.searchLink a{
+    color:#999;
+}
+.searchLink a:hover{
+    color:#f00;
+    border-bottom:1px solid #f00;
+}
+.mainNav{
+    margin:0 0 0 28px;
+}
+.mainNav a{
+    font-size:14px;
+    margin-right:35px;
+    color:#000;
+}
+.hot{
+    position: relative;
+}
+.hotp{
+    display: inline-block;
+    width:19px;
+    height:12px;
+    background: url("../images/hot.gif");
+    position: absolute;
+    top:-10px;
+    left:58px;
+}
+.loadApp{
+    width:96px;
+    height:130px;
+    background:url(../images/apps_bg.gif);
+    margin-right: 28px;
+}
+.float-list{
+    width:188px;
+    height:594px;
+    position: absolute;
+    top: 129px;
+    left: 50%;
+    margin-left: -598px;
+    z-index:1;
+}
+.listMain{
+    width:188px;
+    height:34px;
+    text-align: center;
+    line-height: 34px;
+    background:#382f6b;
+}
+.lista{
+    color: #fff;
+    font-weight: 800;
+}
+.listDiv{
+    width:188px;
+    height:560px;
+    background:#382f6b;
+    z-index: 0;
+}
+.listDivs{
+    display: none;
+}
+.list1,.list3,.list5,.list7,.list9{
+    background:#463b7f;
+}
+.listDiv dl{
+    width:173px;
+    height:52px;
+    padding:10px 0 0 15px;
+}
+.listDiv dl p a:hover{
+    border-bottom:1px solid red;
+    color:red;
+}
+.listDiv strong a{
+    color:#fff;
+    font-weight: 800;
+}
+.listDiv p{
+    margin-top:8px;
+}
+.listDiv p a{
+    color:#fff;
+    margin-right:8px;
+}
+
+.changeJ{
+    position: absolute;
+    top: 15px;
+    right: 46px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #fff;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+}
+.changeJs{
+    position: absolute;
+    top: 15px;
+    right: 46px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #fff;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    display: none;
+}
+
+
+
+
+
+
+
+/*---------------------nheader-------------------------*/
+.nheader{
+    width:100%;
+    height:163px;
+    position:relative;
+    background: #fff;
+}
+.topBar{
+    width:100%;
+    height:30px;
+    position: relative;
+    background: #fff;
+}
+.topBarCen{
+    width:1200px;
+    height:30px;
+    margin:0 auto;
+}
+.sCart{
+    padding: 0 18px 0 8px;
+    line-height:30px;
+    color: #999;
+    position: relative;
+    cursor: pointer;
+}
+.sCart-hover:hover{
+    color:#5b4f9d;
+}
+.indexExit{
+    display: none;
+}
+.chead-Cart{
+    width:96px;
+    height:30px;
+}
+.sCart em{
+    display:inline-block;
+    width:13px;
+    height:11px;
+    background: url(../images/p_07_new.png) no-repeat -1px 0;
+    margin:0 4px 0 0;
+}
+.carRline{
+    line-height:30px;
+    margin-right:6px;
+    color:#999;
+}
+/*---------------------footer-start-------------------------*/
+.footer{
+    overflow: hidden;
+    margin-top:50px;
+}
+.footercen{
+    margin:0 auto;
+}
+/*---------------------fnav-start-------------------------*/
+.fnav{
+    width:1200px;
+    margin:0 auto;
+    background: url(../images/p_11.jpg) no-repeat center right;
+    background-position-x: 0;
+    overflow: hidden;
+}
+.fnav01{
+    margin:30px 18px 10px;
+}
+.fava{
+    display: block;
+    line-height:23px;
+    color:#999;
+}
+.fava:hover{
+    color:#126;
+}
+.fnav01title{
+    font-weight: bold;
+    margin-bottom:8px;
+}
+.fnav02{
+    margin:30px 34px 10px;
+}
+.fnav04{
+    margin:30px 47px 10px;
+}
+.fnav02t{
+    font-weight: normal;
+}
+
+/*---------------------fnav-end-------------------------*/
+/*---------------------promise-start-------------------------*/
+.promise{
+    overflow: hidden;
+    background: #463b7f;
+    height:40px;
+    clear: both;
+}
+.promisecen{
+    width:1200px;
+    margin:0 auto;
+}
+.propho{
+    width:22px;
+    height:22px;
+    background: url("../images/p_04.png");
+    margin:10px 0 0 118px;
+}
+.real{
+    background-position: 0 0;
+}
+.realf{
+    line-height: 40px;
+    margin-left:5px;
+    color:#fff;
+}
+.tui{
+    background-position: -26px 0;
+}
+.zhuan{
+    width:38px;
+    background-position: -45px 0;
+}
+.quan{
+    width:28px;
+    background-position: -76px 0;
+}
+.tie{
+    width:30px;
+    background-position: -104px 0;
+}
+
+/*---------------------promise-end-------------------------*/
+.footerinfocen{
+    width:1200px;
+    margin:0 auto;
+    margin-top:30px;
+    position: relative;
+}
+.footinfoa{
+    color:#999;
+    padding-right:16px;
+}
+.footinfoa:hover{
+    color:#126;
+}
+.footlink{
+    margin-bottom:20px;
+}
+.flp{
+    color:#999;
+    height:20px;
+    padding-right:23px;
+    line-height: 20px;
+}
+.flpimg{
+    margin-top:2px;
+    width:20px;
+    height:20px;
+    background: url("../images/pcfooterbatb.png");
+}
+.cspan{
+    color:#999;
+}
+.footphoes a{
+    padding-right:20px;
+}
+.app{
+    width:110px;
+    height:110px;
+    position: absolute;
+    left:940px;
+    top:20px;
+}
+.appp{
+    margin-top:8px;
+    text-align: center;
+    color:#666;
+}
+.weixin{
+    width:110px;
+    height:110px;
+    position: absolute;
+    left:1080px;
+    top:20px;
+}
+/*---------------------footer-end-------------------------*/

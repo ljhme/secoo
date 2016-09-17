@@ -1,0 +1,172 @@
+@charset "utf-8";
+/*---pro_Shirt-start---*/
+.pro_Shirt,.pro_Knitewar,.pro_Coat{
+    overflow: hidden;
+    margin:40px 0;
+}
+.pro_ShirtCen{
+    width:1200px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.shirt_Title{
+    overflow: hidden;
+    margin-bottom:20px;
+}
+.st_leftLine{
+    margin:5px 0;
+}
+.st_leftLine span{
+    display: inline-block;
+    width: 9px;
+    height:11px;
+    background: url("../images/proListImg/pic_40.jpg");
+}
+.pro_line_01{
+    display: inline-block;
+    width: 514px;
+    height:1px;
+    background: #8e8e8e;
+    margin:5px 0;
+}
+.stT_font{
+    font-size:20px;
+    font-weight: bold;
+    color: #666;
+    padding:0 40px 0 41px;
+}
+.pro_line_02{
+    display: inline-block;
+    width: 504px;
+    height:1px;
+    background: #8e8e8e;
+    margin:5px 0;
+}
+.pro_ShirtCen ul{
+    width: 110%;
+    background: #fff;
+    overflow: hidden;
+}
+.pro_ShirtCen ul li{
+    width: 240px;
+    float: left;
+    color: #5d5d5d;
+    padding: 15px;
+    margin: 35px 40px 0 0;
+    overflow: hidden;
+}
+.pro_ShirtCen .img-box {
+    width: 240px;
+    height: 240px;
+    background: #fff;
+    position: relative;
+    margin:0 auto;
+    text-align: center;
+}
+.img-shade{
+    position: absolute;
+    width:240px;
+    height:203px;
+    background: #FFFAFA	;
+    opacity: 0.4;
+    transform:skew(-30deg);
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -o-transform:skew(-30deg);
+    -ms-transform:skew(-30deg);
+    top:0;
+    left:-280px;
+
+}
+
+.pro_ShirtCen .img-box a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.pro_ShirtCen .name-box {
+    width: 100%;
+    padding-top: 40px;
+    height: 36px;
+    line-height: 19px;
+    overflow: hidden;
+}
+.pro_ShirtCen a {
+    text-decoration: none;
+    color: #666;
+}
+.pro_ShirtCen .price-box {
+    width: 100%;
+    height: 20px;
+    padding-top: 5px;
+    overflow: hidden;
+    line-height: 20px;
+}
+.pro_ShirtCen .price {
+    color: #5d5d5d;
+    font-weight: bold;
+    font-size: 14px;
+    float: left;
+}
+
+/*---pro_Shirt-end---*/
+
+/*----------listStairs----------*/
+.listStairs{
+    width:99px;
+    height:200px;
+    position: fixed;
+    top:1200px;
+    right:20px;
+    display: none;
+    opacity: 0.1;
+}
+.listStairs div{
+    background: url("../images/ico_goto.jpg");
+    border-radius: 5px;
+    opacity: 0.8;
+}
+.listStairs div span{
+    opacity: 1;
+}
+.step{
+    width:99px;
+    height:28px;
+    background-position: 0 0;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    color:#666666;
+    cursor: pointer;
+}
+.stepLink{
+    display: block;
+    width: 79px;
+    height:5px;
+    padding:0 10px;
+}
+.linkLeft{
+    display: block;
+    width:5px;
+    height: 8px;
+    background: #666666;
+}
+.gotoTop{
+    width:99px;
+    height:38px;
+    background-position: 0 -29px;
+    margin-top:10px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color:#666666;
+    cursor: pointer;
+}
+.linkLefts{
+    display: block;
+    width:5px;
+    height: 20px;
+    background: #666666;
+}

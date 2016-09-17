@@ -1,0 +1,96 @@
+@charset "utf-8";
+/*------------public--------------*/
+* {margin: 0;outline: 0;padding: 0;}
+body { background:#f2f2f4;font-family: "Microsoft Yahei";font-size:14px;margin: 0;padding: 0;}
+body, form, ul, ol, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, table, fieldset, hr, div {margin: 0;padding: 0;}
+img {border: 0 none;max-width:100%;}
+ul, ol, li {list-style-type: none;}
+:focus { outline: none; }
+a {outline: medium none;text-decoration: none;}
+a:hover {text-decoration: none;}
+em {font-style: normal;}
+input{border:0}
+/*-----------------字体粗细--------------------*/
+.fw-bold{
+    font-weight: bold;
+}
+.fw-500{
+    font-weight:500;
+}
+/*-----------------浮动定位--------------------*/
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.pa{
+    position: absolute;
+}
+.pr{
+    position: relative;
+}
+/*-----------------背景颜色--------------------*/
+.bg-fff{
+    background: #FFFFFF;
+}
+.bg-136e97{
+    background: #136e97;
+}
+.bg-f0f0f0{
+    background:#f0f0f0;
+}
+/*-----------------字体颜色--------------------*/
+.c-fff{ color:#fff}
+.c-136e97{ color:#136e97}
+.c-8e8e8e{ color:#8e8e8e}
+.c-595757{ color:#595757}
+.c-888686{ color:#888686}
+.c-3e3a39{ color:#3e3a39}
+.c-666{ color:#666}
+.c-333{ color:#333}
+/*-----------------边框颜色--------------------*/
+.b-dcdddd{ border:1px solid #dcdddd}
+.b-888984{ border:1px solid #888984}
+.b-136e97{ border:1px solid #136e97}
+.b-dcdddd{ border:1px dashed #dcdddd}
+.bb-bebebe{border-bottom:1px solid #bebebe}
+.br-3f6b7f{ border-right:1px solid #3f6b7f}
+.bb-2b4b5b{ border-bottom:1px solid #2b4b5b}
+.bb-dcdddd{ border-bottom:1px dashed #dcdddd}
+.br5{ border-radius:5px;}
+.br3{ border-radius:3px;}
+/*-----------------水平垂直对齐--------------------*/
+.tl {text-align: left;}
+.tr {text-align: right;}
+.tc {text-align: center;}
+.tin-2{ text-indent:2em}
+.vt {vertical-align: top;}
+.vm {vertical-align: middle;}
+.vb {vertical-align: bottom;}
+.of-h{overflow: hidden;}
+.cur-po{cursor: pointer;}
+/*-----------------转换元素--------------------*/
+.dis-n {display: none;}
+.dis-b {display: block;}
+.dis-ib{display: inline-block;}
+/*-----------------宽高--------------------*/
+.wp-100 {width: 100%;}
+.wp-50{width: 50%;}
+.w-400{ width:400px;}
+.w-300{ width:300px;}
+.w-800{ width:800px;}
+.w-200{ width:200px;}
+.w-140{ width:140px;}
+.w-50{ width:50px;}
+.hp-100{ height:100%}
+.h-80{ height:80px;}
+/*-------------------- 边距 --------------------*/
+.mp-2{ margin:2%}
+.m0-mp2{ margin:0 2%}
+.pb-70{ padding-bottom:70px;}
+
+
+/*---------------------其他-------------------------*/
+.home{width:19px;height:13px;background:url(../images/gt.png);float:left;margin:6px 6px 0 20px;}
+.dangqian{height:25px;width:100%;line-height:25px;border-bottom:1px solid #e3e3e3;margin-top:1%;padding-bottom:10px;}

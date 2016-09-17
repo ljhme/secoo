@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寺库管理系统-首页</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+</head>
+<body>
+<!--头部开始-->
+<link type="text/css" rel="stylesheet" href="css/header.css">
+<div class="wp-100 h-80 header">
+    <h1 class="c-fff fw-500"><a href="login.html">退出</a>您好：欢迎13422094进入寺库管理系统</h1>
+</div>
+<!--end-->
+
+
+<!--框架开始-->
+<link type="text/css" rel="stylesheet" href="css/frame.css">
+<div class="container">
+    <div class="left" id="leftId">
+        <div class="line menu">
+            <dl class="userManagement">
+                <dt>用户管理<img src="images/down.png"></dt>
+                <dd class="hover first_dd"><a href="#">01 添加新用户</a></dd>
+                <dd ><a href="#">02 修改用户信息</a></dd>
+                <dd ><a href="#">03 查看个人信息</a></dd>
+                <dd ><a href="#">04 删除用户</a></dd>
+            </dl>
+
+            <dl class="systemManagement">
+                <dt>系统管理<img src="images/down.png"></dt>
+                <dd ><a href="login.html">01 退出系统</a></dd>
+                <dd ><a href="#">02 系统简介</a></dd>
+                <dd ><a href="#">03 系统使用说明</a></dd>
+            </dl>
+
+
+            <dl class="commodityManagement">
+                <dt>商品管理<img src="images/down.png"></dt>
+                <dd class="first_dd"><a href="CreateUpdateProduct.html" target="mainFrame">01 添加商品</a></dd>
+                <dd><a href="GetProductsByPage.html" target="mainFrame">02 产看所有商品</a></dd>
+                <dd><a href="GetProductById.html" target="mainFrame">03 修改商品</a></dd>
+                <dd><a href="GetProductById.html" target="mainFrame">04 查看单个商品</a></dd>
+                <dd><a href="DeleteProductById.html" target="mainFrame">05 删除商品</a></dd>
+            </dl>
+
+            <dl class="orderManagement">
+                <dt>订单管理<img src="images/down.png"></dt>
+                <dd class="first_dd"><a href="#">01 查看指定订单</a></dd>
+                <dd><a href="#">02 产看所有订单</a></dd>
+                <dd><a href="#">03 订单处理</a></dd>
+            </dl>
+
+        </div>
+    </div>
+    <div class="right">
+        <iframe src="" name = "mainFrame" frameborder="no" border="0" width="100%" height="1000"></iframe>
+    </div>
+</div>
+<!--左侧-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(".left dt img").attr("src","images/down.png");
+    $(function(){
+        $(".left dd").hide();
+        $(".left dt").click(function(){
+            $(this).parent().find('dd').removeClass("menu_chioce");
+            $(".left dt img").attr("src","images/down.png");
+            $(this).parent().find('img').attr("src","images/top.png");
+            $(".menu_chioce").slideUp();
+            $(this).parent().find('dd').slideToggle();
+            $(this).parent().find('dd').addClass("menu_chioce");
+        });
+        $(".left dd").click(function(){
+            $(".left dd").css({"background-color":"#f2f2f4","border-top":"1px solid #f2f2f4","border-bottom":"1px solid #f2f2f4","border-left":"1px solid #f2f2f4"})
+            $(this).css({"background-color": "#fff","border-top":"1px solid #dcdddd","border-bottom":"1px solid #dcdddd","border-left":"1px solid #dcdddd"});
+        });
+    })
+</script>
+<!--end-->
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/cart.js"></script>
+</head>
+<body>
+<!--++++++++++++++cartHeader_Start++++++++++++++++++++++++++-->
+<div class="cartHeader">
+    <div class="cartHeaderCen">
+        <div class="fl">
+            <a href="index.html" class="cartPage_logo"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="fr">
+            <img src="images/cartImg/c_05.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="cartContent">
+    <div class="cartContentCen">
+        <div class="cenCart">
+
+
+            <div class="nullCart">
+                <div class="nullText">
+                    <p class="cText01">购物车内暂时没有商品，您可以：</p>
+                    <p class="cText02">
+                        <a href="index.html" class="a02">返回首页挑选商品</a>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="cartHave">
+                <div class="cartTitle">
+                    <span class="cartUser">1367240662</span>　<span class="cartExit">退出</span>
+                </div>
+                <div class="cartsList">
+                    <table cellspacing="0" cellpadding="0" border="0" class="carTable">
+                        <thead>
+                        <tr>
+                            <th width="75"><input name="choseAll" class="choseAlls" type="checkbox" id="choseAll"><label for="choseAll">全选</label></th>
+                            <th width="355" colspan="2">商品名称</th>
+                            <th width="96">发货站</th>
+                            <th width="96">会员价</th>
+                            <th width="140">数量</th>
+                            <th width="110">金额小计</th>
+                            <th width="110">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody class="protr">
+                        <!-- 促销相关头部提示 -->
+                        <!--<tr>
+                            <th><input class="checkBox" value="promotionId1843"  type="checkbox"></th>
+                            <th colspan="5" width="762" align="left">
+                                <span class="ctTinp02 ">满额减</span>
+                                <b class="padLeft10"><span class="padLeft10 color666">[衬衫满2000减300]</span></b>
+                                <span class="padLeft10 color666">再买2000.00元，将扣减300.00元</span>
+                            </th>
+                            <th width="110"><strong class="colore93"><span class="rmb colore93"></span>0元</strong></th>
+                            <th align="left">
+
+                            </th>
+                        </tr>
+
+                        &lt;!&ndash; 商品明细列表加载 &ndash;&gt;
+                        <tr name="cartRow">
+                            <td><input class="checkBox" value="15401614_0"  type="checkbox"></td>
+                            <td width="97" valign="top">
+                                <div class="cartPic fl padRight15">
+                                    <a href="#" target="_blank"><img src="images/cartImg/15401614.jpg" alt="【16年秋季新品】ARMANI COLLEZIONI/阿玛尼卡尔兹-男士淡蓝色白色棉质长袖衬衫(两件装）" width="80" height="80"></a>
+                                </div>
+                            </td>
+                            <td valign="top">
+                                <div class="cartNames fl">
+                                    <p class="namePro"><a href="#" target="_blank">【16年秋季新品】ARMANI COLLEZIONI/阿玛尼卡尔兹-男士淡蓝色白色棉质长袖衬衫(两件装）</a></p>
+                                </div>
+                                <div class="cartNames fl" style="overflow:visible">
+                                    <p class="namePro color999 pad45">
+                                        颜色：淡蓝&nbsp;&nbsp;
+                                        尺码：39&nbsp;&nbsp;
+                                    </p>
+                                </div>
+                            </td>
+                            <td valign="top">中国大陆</td>
+                            <td valign="top"><span class="rmb">¥</span>2350</td>
+                            <td valign="top">
+                                <div class="countNum">
+                                    <div class="cPlus fl" action="decrease">-</div>
+                                    <div class="cInput fl"><input class="Num" type="text" name="quantity"></div>
+                                    <div class="cMinus fl">+</div>
+                                </div>
+
+                            </td>
+                            <td valign="top">
+
+                            </td>
+                            <td valign="top"><a href="###" class="del" name="deleteRow">删除</a></td>
+                        </tr>-->
+                        <!-- 商品明细列表加载结束 -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="cartPrice">
+                    <div class="cartAno">
+                        <div class="ano01 fl">
+                            <input name="choseAll" id="All" type="checkbox" class="choseAlls"><label for="All">全选</label>
+                        </div>
+
+                    </div>
+                    <p>商品数量总计：<span class="haveCount">0</span>件</p>
+                    <p>包装数量总计：<span class="packgeCount">0</span>件</p>
+                    <p>返利库币：<span class="kubi">0</span>库币</p>
+                    <p class="totalPriceBottom">商品金额总计（不含运费）：<span class="rmb"></span><strong class="allmoney">0</strong></p>
+                    <p class="clearfix">
+                        <a href="index.html" class="fl a01 marTop12" target="_blank">继续购物</a>
+                        <a href="pay.html" class="fr a02 a02dis">立即结算</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="cart_youLike">
+                <h3 class="ch3">猜你喜欢</h3>
+                <div class="cartLikePro">
+                    <ul class="likeul">
+                        <li>
+                            <img src="images/cartImg/14120369.jpg" alt="">
+                            <p>【16年秋季新品】ARMANI</p>
+                            <span class="cartlPrice"><span>1200</span>元</span>
+                        </li>
+                        <li>
+                            <img src="images/cartImg/14120369.jpg" alt="">
+                            <p>【16年秋季新品】ARMANI</p>
+                            <span class="cartlPrice"><span>1200</span>元</span>
+                        </li>
+                        <li>
+                            <img src="images/cartImg/14120369.jpg" alt="">
+                            <p>【16年秋季新品】ARMANI</p>
+                            <span class="cartlPrice"><span>1200</span>元</span>
+                        </li>
+                        <li>
+                            <img src="images/cartImg/14120369.jpg" alt="">
+                            <p>【16年秋季新品】ARMANI</p>
+                            <span class="cartlPrice"><span>1200</span>元</span>
+                        </li>
+
+                        <li>
+                            <img src="images/cartImg/14120369.jpg" alt="">
+                            <p>【16年秋季新品】ARMANI</p>
+                            <span class="cartlPrice"><span>1200</span>元</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--++++++++++++++cartHeader_End++++++++++++++++++++++++++-->
+
+<div class="cartfooter">
+    <div class="cartfooterCen">
+        <ul class="carfooterLeft fl">
+            <li>
+                <a href="#">
+                    <div class="topIcon">
+                        <p class="Icon1"></p>
+                    </div>
+                    <div class="text">正品保障</div>
+                </a>
+            </li>
+            <li class="hr"></li>
+            <li>
+                <a href="#">
+                    <div class="topIcon">
+                        <p class="Icon2"></p>
+                    </div>
+                    <div class="text">七天退修</div>
+                </a>
+            </li>
+            <li class="hr"></li>
+
+            <li>
+                <a href="#">
+                    <div class="topIcon">
+                        <p class="Icon3"></p>
+                    </div>
+                    <div class="text">维修保养</div>
+                </a>
+            </li>
+            <li class="hr"></li>
+
+
+            <li>
+                <a href="#">
+                    <div class="topIcon">
+                        <p class="Icon4"></p>
+                    </div>
+                    <div class="text">权威鉴定</div>
+                </a>
+            </li>
+            <li class="hr"></li>
+
+            <li>
+                <a href="#">
+                    <div class="topIcon">
+                        <p class="Icon5"></p>
+                    </div>
+                    <div class="text">管家服务</div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="cartFooterCen fl">
+            <div class="cartWeixin fl">
+                <p>关注寺库微信</p>
+                <img src="images/cartImg/weixin.jpg" alt="">
+                <p>扫一扫有惊喜</p>
+            </div>
+
+            <div class="cartWeixin fl">
+                <p>关注寺库微信</p>
+                <img src="images/cartImg/weixin.jpg" alt="">
+                <p>扫一扫有惊喜</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="cartFooterCen fl">
+            <ul class="cartlink1 fl">
+                <li><a href="#">加入寺库</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">免责申明</a></li>
+                <li><a href="#">寺库微博</a></li>
+            </ul>
+
+            <ul class="cartlink2 fl">
+                <li><a href="#">加入寺库</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">免责申明</a></li>
+                <li><a href="#">寺库微博</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="cartfooters">
+    <div class="cartfooterCens">
+        <p class="fl footerend">京ICP备09084709号-3 京公网安备110105004373号</p>
+        <a href="#" class="fl footericon1"><img src="images/cartImg/foot_pic01.png" alt=""></a>
+        <a href="#" class="fl footericon1"><img src="images/cartImg/foot_pic02.png" alt=""></a>
+        <a href="#" class="fl footericon1"><img src="images/cartImg/gongshangju.png" alt=""></a>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

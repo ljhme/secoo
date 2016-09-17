@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表页</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/proList.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/proList.js"></script>
+</head>
+<body>
+<!--++++++++++++++++nheader+++++++++++++++++-->
+<div class="nheader">
+    <div class="topBar">
+        <div class="topBarCen">
+            <a  class="sCart sCart-hover chead-Cart fr">
+                <em></em>
+                购物车
+                <span id="carNum">(0)</span>
+            </a>
+            <span class="fr carRline">|</span>
+            <a href="#" class="fr sCart sCart-hover">媒体聚焦</a>
+            <a href="#" class="fr sCart sCart-hover">
+                客户服务
+                <i class="drop-jian"></i>
+            </a>
+            <a href="#" class="sCart sCart-hover fr" >我的订单</a>
+            <span class="sCart sCart-hover fr">|</span>
+            <a href="index.html" class="sCart sCart-hover fr indexExit">退出</a>
+            <a href="login.html?id=2" class="sCart sCart-hover fr indexRegist">免费注册</a>
+            <a href="login.html?id=1" class="sCart sCart-hover fr indexLogin">请登录</a>
+            <span class="sCart fr">欢迎光临寺库</span>
+
+
+            <a class="logo fl"></a>
+            <a href="#" class="logoRightGif fl dis-b"></a>
+
+            <div class="logoCenter fl">
+                <div class="Search fl">
+                    <input type="text" class="searchTxt" value="FENDI/芬迪">
+                </div>
+                <a href="#" class="searchBtn fl">搜索</a>
+                <ul class="searchLink">
+                    <li><a href="">大牌腕表TOPS</a></li>
+                    <li><a href="">年轻人的厨房</a></li>
+                    <li><a href="">卫衣搞定秋天</a></li>
+                    <li><a href="">千元好包</a></li>
+                    <li><a href="">百款针扣腰带</a></li>
+                </ul>
+
+                <div class="mainNav">
+                    <a href="">首页</a>
+                    <a href="" class="hot">免税直邮<span class="hotp"></span></a>
+                    <a href="">闪购SALE</a>
+                    <a href="">我卖我拍</a>
+                    <a href="">品牌旗舰店</a>
+                    <a href="">中国精品</a>
+                    <a href="">男士</a>
+                    <a href="">女士</a>
+                    <a href="">豪车</a>
+                </div>
+            </div>
+
+            <div class="loadApp fr"></div>
+        </div>
+    </div>
+    <div class="float-list float-lists" id="float-list">
+        <div class="listMain listMains">
+            <a href="#" class="lista">
+                全部奢品
+                <i class="changeJ"></i>
+                <i class="changeJs"></i>
+            </a>
+        </div>
+
+        <div class="listDiv listDivs">
+            <dl class="list1 lists">
+                <dt>
+                    <strong>
+                        <a href="#">包袋</a>
+                    </strong>
+                <p>
+                    <a href="#">手提包</a>
+                    <a href="#">单肩包</a>
+                    <a href="#">钱包</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list2 lists">
+                <dt>
+                    <strong>
+                        <a href="#">腕表</a>
+                    </strong>
+                <p>
+                    <a href="#">欧米茄</a>
+                    <a href="#">劳力士</a>
+                    <a href="#">浪琴</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+
+            <dl class="list3 lists">
+                <dt>
+                    <strong>
+                        <a href="#">首饰</a>
+                    </strong>
+                <p>
+                    <a href="#">卡地亚</a>
+                    <a href="#">宝格丽</a>
+                    <a href="#">香奈儿</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+            <dl class="list4 lists">
+                <dt>
+                    <strong>
+                        <a href="#">服装鞋靴</a>
+                    </strong>
+                <p>
+                    <a href="#">男士T恤</a>
+                    <a href="#">男士衬衫</a>
+                    <a href="#">休闲鞋</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+            <dl class="list5 lists">
+                <dt>
+                    <strong>
+                        <a href="#">配饰</a>
+                    </strong>
+                <p>
+                    <a href="#">围巾</a>
+                    <a href="#">腰带</a>
+                    <a href="#">眼镜</a>
+                    <a href="#">丝巾</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list6 lists">
+                <dt>
+                    <strong>
+                        <a href="#">家居生活</a>
+                    </strong>
+                <p>
+                    <a href="#">烟具</a>
+                    <a href="#">保温杯</a>
+                    <a href="#">家纺</a>
+                    <a href="#">茶道</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list7 lists">
+                <dt>
+                    <strong>
+                        <a href="#">母婴美妆</a>
+                    </strong>
+                <p>
+                    <a href="#">美妆</a>
+                    <a href="#">儿童书包</a>
+                    <a href="#">营养奶粉</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list8 lists">
+                <dt>
+                    <strong>
+                        <a href="#">户外运动</a>
+                    </strong>
+                <p>
+                    <a href="#">冲锋衣</a>
+                    <a href="#">徒步鞋</a>
+                    <a href="#">背包</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list9 lists">
+                <dt>
+                    <strong>
+                        <a href="#">豪车频道</a>
+                    </strong>
+                <p>
+                    <a href="#">进口车</a>
+                    <a href="#">精品</a>
+                    <a href="#">儿童车品</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<!--+++++header-end+++++++-->
+
+
+<!--+++++pro_Shirt-start+++++++-->
+<div class="pro_Shirt">
+    <div class="pro_ShirtCen">
+        <div class="shirt_Title">
+            <div class="st_leftLine fl">
+                <span></span>
+                <em class="pro_line_01"></em>
+                <span></span>
+            </div>
+            <p class="fl stT_font">衬衫</p>
+            <div class="st_leftLine fr">
+                <span></span>
+                <em class="pro_line_01"></em>
+                <span></span>
+            </div>
+        </div>
+
+        <ul class="proListS_ul">
+           <!--<li>
+                <div class="img-box">
+                    <a href="#">
+                        <img src="" alt="">
+                        <div class="img-shade">
+
+                        </div>
+                    </a>
+                </div>
+
+                <p class="name-box">
+                    <a href="#"></a>
+                </p>
+                <p class="price-box">￥
+                    <span class="price"></span>
+                </p>
+            </li>-->
+        </ul>
+
+
+
+    </div>
+</div>
+
+<!--+++++pro_Shirt-end+++++++-->
+
+<!--+++++pro_Knitwear-start+++++++-->
+<div class="pro_Knitewar">
+    <div class="pro_ShirtCen">
+        <div class="shirt_Title">
+            <div class="st_leftLine fl">
+                <span></span>
+                <em class="pro_line_02"></em>
+                <span></span>
+            </div>
+            <p class="fl stT_font">针织衫</p>
+            <div class="st_leftLine fr">
+                <span></span>
+                <em class="pro_line_02"></em>
+                <span></span>
+            </div>
+        </div>
+
+
+
+        <ul class="proListK_ul">
+            <!--<li>
+                 <div class="img-box">
+                     <a href="#">
+                         <img src="" alt="">
+                         <div class="img-shade">
+
+                         </div>
+                     </a>
+                 </div>
+
+                 <p class="name-box">
+                     <a href="#"></a>
+                 </p>
+                 <p class="price-box">￥
+                     <span class="price"></span>
+                 </p>
+             </li>-->
+        </ul>
+
+
+
+
+
+    </div>
+</div>
+
+<!--+++++pro_Knitwear-end+++++++-->
+
+<!--+++++pro_Coat-start+++++++-->
+<div class="pro_Coat">
+    <div class="pro_ShirtCen">
+        <div class="shirt_Title">
+            <div class="st_leftLine fl">
+                <span></span>
+                <em class="pro_line_01"></em>
+                <span></span>
+            </div>
+            <p class="fl stT_font">外套</p>
+            <div class="st_leftLine fr">
+                <span></span>
+                <em class="pro_line_01"></em>
+                <span></span>
+            </div>
+        </div>
+
+        <ul class="proListC_ul">
+            <!--<li>
+                 <div class="img-box">
+                     <a href="#">
+                         <img src="" alt="">
+                         <div class="img-shade">
+
+                         </div>
+                     </a>
+                 </div>
+
+                 <p class="name-box">
+                     <a href="#"></a>
+                 </p>
+                 <p class="price-box">￥
+                     <span class="price"></span>
+                 </p>
+             </li>-->
+        </ul>
+
+
+
+    </div>
+</div>
+
+<!--+++++pro_Coat-end+++++++-->
+
+<!--++++++++++++++++++++++++++++++footer-Start+++++++++++++++++++++++++++++++-->
+
+<!--++++++++++++++++++++++++++++++footernav-Start+++++++++++++++++++++++++++++++-->
+<div class="footer">
+    <div class="footercen">
+        <div class="fnav">
+            <div class="fnav01 fl">
+                <span class="fnav01title dis-b">新手指南</span>
+                <a href="#" class="fava">注册新用户</a>
+                <a href="#" class="fava">网上订购流程</a>
+                <a href="#" class="fava">优惠券使用说明</a>
+                <a href="#" class="fava">海外站购买说明</a>
+                <a href="#" class="fava">美国站购买说明</a>
+            </div>
+
+
+            <div class="fnav02 fl">
+                <span class="fnav01title dis-b">付款方式</span>
+                <a href="#" class="fava">在线支付</a>
+                <a href="#" class="fava">库支付</a>
+                <a href="#" class="fava">银行汇款</a>
+                <a href="#" class="fava">货到付款</a>
+            </div>
+
+
+            <div class="fnav02 fl">
+                <span class="fnav01title dis-b">物流派送</span>
+                <a href="#" class="fava">管家派送</a>
+                <a href="#" class="fava">快递派送</a>
+                <a href="#" class="fava">到站自提</a>
+                <a href="#" class="fava">派送范围及时间</a>
+                <a href="#" class="fava">派送政策</a>
+            </div>
+
+            <div class="fnav04 fl">
+                <span class="fnav01title dis-b">售后服务</span>
+                <a href="#" class="fava">退换货说明</a>
+                <a href="#" class="fava">如何办理退款</a>
+                <a href="#" class="fava">售后服务保养手册</a>
+                <a href="#" class="fava">奢侈品养护服务</a>
+                <a href="#" class="fava">奢侈品拍卖置换</a>
+            </div>
+
+            <div class="fnav04 fl">
+                <span class="fnav01title dis-b">跨境体验店</span>
+                <span class="fnav01title dis-b fnav02t">寺库通过在全球多地设立体验店和办事机构的方式，为高端消费<br/>者提供贴心的全球奢侈品一站式服务</span>
+                <div class="fl" style="margin-right:60px;">
+                    <a href="#" class="fava">北京</a>
+                    <a href="#" class="fava">上海</a>
+                    <a href="#" class="fava ">成都</a>
+                </div>
+                <div class="fl">
+                    <a href="#" class="fava">香港</a>
+                    <a href="#" class="fava">米兰</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--++++++++++++++++++++++++++++++footerend-Start+++++++++++++++++++++++++++++++-->
+
+        <div class="promise">
+            <div class="promisecen">
+                <div class="propho real fl"></div>
+                <span class="dis-b fl realf">100%正品保证</span>
+
+
+
+                <div class="propho tui fl"></div>
+                <span class="dis-b fl realf">7天退换</span>
+
+
+
+                <div class="propho zhuan fl"></div>
+                <span class="dis-b fl realf">专业维修保养</span>
+
+
+
+                <div class="propho quan fl"></div>
+                <span class="dis-b fl realf">权威奢侈品鉴定</span>
+
+
+                <div class="propho tie fl"></div>
+                <span class="dis-b fl realf">贴心管家物流</span>
+            </div>
+        </div>
+
+
+        <div class="footerinfo">
+            <div class="footerinfocen">
+                <div class="footlink">
+                    <a href="#" class="footinfoa">寺库网</a>
+                    <a href="#" class="footinfoa">寺库奢侈品养护</a>
+                    <a href="#" class="footinfoa">寺库招商</a>
+                    <a href="#" class="footinfoa">寺库加盟店</a>
+                </div>
+
+                <div class="footlink">
+                    <span class="flp dis-b fl">专业执照注册号110102011888762</span>
+                    <a class="flp dis-b fl" href="#">
+                        <span class="dis-b fl flpimg"></span>
+                        <span>京公安备11010102001392</span>
+                    </a>
+                    <span class="flp">京ICP证110119号 京ICP备09084709号-3</span>
+                    <span class="flp">ISO9001中国质量管理体系认证</span>
+                </div>
+
+                <div class="footlink">
+                    <a href="#" class="footinfoa">加入寺库</a>
+                    <a href="#" class="footinfoa">关于我们</a>
+                    <a href="#" class="footinfoa">联系我们</a>
+                    <a href="#" class="footinfoa">帮助中心</a>
+                    <a href="#" class="footinfoa">寺库微博</a>
+                    <a href="#" class="footinfoa">友情链接</a>
+                    <a href="#" class="footinfoa">奢侈品热词</a>
+                    <a href="#" class="footinfoa">奢侈品资讯</a>
+                </div>
+
+                <div class="footlink">
+                    <span class="cspan">COPYRIGHT © 2010-2016 北京寺库商贸有限公司 版权所有</span>
+                </div>
+
+                <div class="footlink footphoes">
+                    <a href="#"><img src="images/f_01.jpg" alt=""></a>
+                    <a href="#"><img src="images/f_04.jpg" alt=""></a>
+                    <a href="#"><img src="images/cnnic.png" alt=""></a>
+                    <a href="#"><img src="images/kexin.jpg" alt=""></a>
+                    <a href="#"><img src="images/f_03.jpg" alt=""></a>
+                </div>
+
+                <div class="dis-b app">
+                    <img src="images/app_ewm0827.jpg" alt="">
+                    <p class="appp">手机客户端</p>
+                </div>
+
+                <div class="dis-b weixin">
+                    <img src="images/sk_ewm0827.jpg" alt="">
+                    <p class="appp">官方微信</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+<!--++++++++++++++++++++++++++++++footer-End+++++++++++++++++++++++++++++++-->
+
+<div class="listStairs">
+    <div class="step steps">衬衫</div>
+    <span class="stepLink">
+        <span class="linkLeft fl"></span>
+        <span class="linkLeft fr"></span>
+    </span>
+    <div class="step steps">针织衫</div>
+    <span class="stepLink">
+        <span class="linkLeft fl"></span>
+        <span class="linkLeft fr"></span>
+    </span>
+    <div class="step steps">外套</div>
+    <span class="stepLink">
+        <span class="linkLeft fl"></span>
+        <span class="linkLeft fr"></span>
+    </span>
+    <div class="step steps">裤子</div>
+    <span class="stepLink">
+        <span class="linkLefts fl"></span>
+        <span class="linkLefts fr"></span>
+    </span>
+    <div class="gotoTop steps">回到顶部</div>
+</div>
+
+</body>
+</html>

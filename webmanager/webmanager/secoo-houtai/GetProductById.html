@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过ID获取单个商品</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/GetProductById.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/GetProductById.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="dangqian">
+    <span class="home"></span><p>当前的位置>>商品管理>>添加商品>>商品信息</p>
+</div>
+<div id="div1">
+    <div class="sousuotu"></div>
+    <p class="search">搜索：</p>
+    <input type="text" id="productId">
+    <p class="search">商品类型：</p>
+    <select  id="productType">
+        <option>　请选择</option>
+        <option>　服装商品</option>
+        <option>　其他商品</option>
+    </select>
+    <input type="button" id="select" value="查询">
+    <div id="productInfo">
+        <p class="infoTitle">商品编号</p>
+        <p class="infoTitle">商品名称</p>
+        <p class="infoTitle">商品价格</p>
+        <p class="infoTitle">图片全称</p>
+        <p class="infoTitle">商品描述</p>
+        <p class="infoTitle">操作</p>
+    </div>
+
+</div>
+<!--<script>
+
+    //获取单个商品
+
+    $("#bt1").click(function () {
+        //ajax;
+        var ajaxUrl = "../product/GetProductById_get";
+        var ajaxId = $("#txtid").val();
+
+        $.ajax({
+            url: ajaxUrl,
+            data: {
+                id: ajaxId,
+            },
+            success:function (returnData) {   //jQuery关于ajax返回获取值的回调函数
+                console.log(returnData);   //参数returnData的值(string类型)：{"Id":"100","Data":"{\"id\":\"100\",\"name\":\"100\",\"price\":\"100\",\"imgsrc\":\"100.jpg\"}"}
+                var jsonData = JSON.parse(returnData);   //将值转换成json对象
+                console.log(jsonData);    //Object {Id: "100", Data: "{"id":"100","name":"100","price":"100","imgsrc":"100.jpg"}"}
+                console.log(jsonData.Id);  //获取所得值的Id值
+
+                var data = jsonData.Data;   //string类型，需要转换成对象
+                console.log(data); //{"id":"1212","name":"上衣","price":"230","imgsrc":"123.jpg"}   ,字符串
+                var datas = JSON.parse(data);  //转换为json对象
+                console.log(datas);  //Object {id: "100", name: "100", price: "100", imgsrc: "100.jpg"}
+                console.log(datas.id);  //100
+                console.log(datas.name);  //100
+                console.log(datas.price); //100
+            }
+        });
+    })
+</script>-->
+</body>
+</html>

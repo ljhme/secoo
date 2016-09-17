@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/detail.js"></script>
+</head>
+<body>
+<!--++++++++++++++++nheader+++++++++++++++++-->
+<div class="nheader">
+    <div class="topBar">
+        <div class="topBarCen">
+            <a class="sCart sCart-hover chead-Cart fr">
+                <em></em>
+                购物车
+                <span id="carNum">(0)</span>
+            </a>
+            <span class="fr carRline">|</span>
+            <a href="#" class="fr sCart sCart-hover">媒体聚焦</a>
+            <a href="#" class="fr sCart sCart-hover">
+                客户服务
+                <i class="drop-jian"></i>
+            </a>
+            <a href="#" class="sCart sCart-hover fr" >我的订单</a>
+            <span class="sCart sCart-hover fr">|</span>
+            <a href="index.html" class="sCart sCart-hover fr indexExit">退出</a>
+            <a href="login.html?id=2" class="sCart sCart-hover fr indexRegist">免费注册</a>
+            <a href="login.html?id=1" class="sCart sCart-hover fr indexLogin">请登录</a>
+            <span class="sCart fr">欢迎光临寺库</span>
+
+
+            <a href="index.html" class="logo fl"></a>
+            <a href="#" class="logoRightGif fl dis-b"></a>
+
+            <div class="logoCenter fl">
+                <div class="Search fl">
+                    <input type="text" class="searchTxt" value="FENDI/芬迪">
+                </div>
+                <a href="#" class="searchBtn fl">搜索</a>
+                <ul class="searchLink">
+                    <li><a href="">大牌腕表TOPS</a></li>
+                    <li><a href="">年轻人的厨房</a></li>
+                    <li><a href="">卫衣搞定秋天</a></li>
+                    <li><a href="">千元好包</a></li>
+                    <li><a href="">百款针扣腰带</a></li>
+                </ul>
+
+                <div class="mainNav">
+                    <a href="">首页</a>
+                    <a href="" class="hot">免税直邮<span class="hotp"></span></a>
+                    <a href="">闪购SALE</a>
+                    <a href="">我卖我拍</a>
+                    <a href="">品牌旗舰店</a>
+                    <a href="">中国精品</a>
+                    <a href="">男士</a>
+                    <a href="">女士</a>
+                    <a href="">豪车</a>
+                </div>
+            </div>
+
+            <div class="loadApp fr"></div>
+        </div>
+    </div>
+    <div class="float-list float-lists" id="float-list">
+        <div class="listMain listMains">
+            <a href="#" class="lista">
+                全部奢品
+                <i class="changeJ"></i>
+                <i class="changeJs"></i>
+            </a>
+        </div>
+
+        <div class="listDiv listDivs">
+            <dl class="list1 lists">
+                <dt>
+                    <strong>
+                        <a href="#">包袋</a>
+                    </strong>
+                <p>
+                    <a href="#">手提包</a>
+                    <a href="#">单肩包</a>
+                    <a href="#">钱包</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list2 lists">
+                <dt>
+                    <strong>
+                        <a href="#">腕表</a>
+                    </strong>
+                <p>
+                    <a href="#">欧米茄</a>
+                    <a href="#">劳力士</a>
+                    <a href="#">浪琴</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+
+            <dl class="list3 lists">
+                <dt>
+                    <strong>
+                        <a href="#">首饰</a>
+                    </strong>
+                <p>
+                    <a href="#">卡地亚</a>
+                    <a href="#">宝格丽</a>
+                    <a href="#">香奈儿</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+            <dl class="list4 lists">
+                <dt>
+                    <strong>
+                        <a href="#">服装鞋靴</a>
+                    </strong>
+                <p>
+                    <a href="#">男士T恤</a>
+                    <a href="#">男士衬衫</a>
+                    <a href="#">休闲鞋</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+            <dl class="list5 lists">
+                <dt>
+                    <strong>
+                        <a href="#">配饰</a>
+                    </strong>
+                <p>
+                    <a href="#">围巾</a>
+                    <a href="#">腰带</a>
+                    <a href="#">眼镜</a>
+                    <a href="#">丝巾</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list6 lists">
+                <dt>
+                    <strong>
+                        <a href="#">家居生活</a>
+                    </strong>
+                <p>
+                    <a href="#">烟具</a>
+                    <a href="#">保温杯</a>
+                    <a href="#">家纺</a>
+                    <a href="#">茶道</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list7 lists">
+                <dt>
+                    <strong>
+                        <a href="#">母婴美妆</a>
+                    </strong>
+                <p>
+                    <a href="#">美妆</a>
+                    <a href="#">儿童书包</a>
+                    <a href="#">营养奶粉</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list8 lists">
+                <dt>
+                    <strong>
+                        <a href="#">户外运动</a>
+                    </strong>
+                <p>
+                    <a href="#">冲锋衣</a>
+                    <a href="#">徒步鞋</a>
+                    <a href="#">背包</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+            <dl class="list9 lists">
+                <dt>
+                    <strong>
+                        <a href="#">豪车频道</a>
+                    </strong>
+                <p>
+                    <a href="#">进口车</a>
+                    <a href="#">精品</a>
+                    <a href="#">儿童车品</a>
+                </p>
+                </dt>
+                <dd></dd>  <!--子菜单-->
+            </dl>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!--+++++++++++++++++++++商品信息区(detProMes)-start++++++++++++++++++++++-->
+<div class="detProMes">
+    <div class="detProMesCen">
+        <div class="detNav">
+            <p class="detNav-p">
+                <a href="#">首页</a>
+                &gt;
+                <a href="#">服装鞋靴</a>
+                &gt;
+                <a href="#">男士衬衫</a>
+                &gt;
+                <a href="#">阿玛尼卡尔茨</a>
+                &gt;
+                <a href="#">【16年秋季新品】ARMANI COLLEZIONI/阿玛尼卡尔兹-男士蓝格子纯棉长袖衬衫</a>
+            </p>
+            <span>商品编码：15401271</span>
+        </div>
+
+        <div class="detContents">
+            <div class="info-1">
+                <dl id="imgShow">
+                    <dd>
+                        <div class="moveBox">
+                            <div class="moveDiv">
+                                <a href="#"><img src="images/detImage/15401271.jpg" alt=""></a>
+                                <a href="#"><img src="images/detImage/15401271_1.jpg" alt=""></a>
+                                <a href="#"><img src="images/detImage/15401271_4.jpg" alt=""></a>
+                                <a href="#"><img src="images/detImage/15401271_5.jpg" alt=""></a>
+                                <a href="#"><img src="images/detImage/15401271_5.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt>
+                        <img class="moveimg"src="images/detImage/large01.jpg" alt="">
+                    </dt>
+                </dl>
+
+
+                <div class="share_box">
+                    <a href="#">正品保障</a>
+                    <a href="#">七天退换</a>
+                    <a href="#">权威质检</a>
+                    <a href="#">分享</a>
+                    <a href="#">收藏商品</a>
+                </div>
+
+            </div>
+
+            <div class="info-rihgt fr">
+                <div class="proName">
+                    <h2 class="proDes"></h2>
+                    <h3 id="subHeadSpan"></h3>
+                </div>
+                <div class="proDetails" id="proDetails">
+                    <div class="secooPrice">
+                        <span>寺库家</span>
+                        <span class="secooP"><span>￥</span><span class="cecooPriceM"></span></span>
+                    </div>
+                    <div class="cuxiaoInfo">
+                        <span>促销信息</span>
+                        <span class="cx"><span>满减</span>衬衫满2000减300</span>
+                    </div>
+                    <div class="proAdd">
+                        <span>发货地</span>
+                        <span class="pa"><span class="dl">大陆</span>&nbsp;&nbsp;有货&nbsp;&nbsp;&nbsp;预计下单后会在<span class="t-f">2-4</span>天内发货&nbsp;&nbsp;全场包邮</span>
+                    </div>
+                    <div class="wt">
+                        <span>温馨提示</span>
+                        <span class="wtp"><span>本店不支持货到付款</span></span>
+                    </div>
+
+
+                    <div class="procolor">
+                        <span>颜色</span>
+                        <a  href="#" class="procP"><img src="images/detImage/small-color.jpg" alt=""></a>
+                    </div>
+
+                    <div class="size">
+                        <span>尺码</span>
+                        <a href="#" class="size1 sizespan">38</a>
+                        <a href="#" class="sizespan">39</a>
+                        <a href="#" class="sizespan">40</a>
+                        <a href="#" class="sizespan">41</a>
+                        <a href="#" class="sizespan">42</a>
+                        <a href="#" class="sizespan">43</a>
+                    </div>
+
+
+                    <div class="proCount">
+                        <span>购买数量</span>
+                        <span class="spanM"><a class="mul">-</a><span class="num">1</span><a class="add">+</a></span>
+
+                    </div>
+
+                    <div class="btn">
+                        <a class="immid fl">立即抢购</a>
+                        <a class="addCart fl"><span></span>加入购物车</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--+++++++++++++++++++++商品信息区(detProMes)-End++++++++++++++++++++++-->
+
+
+<!--+++++++++++++++++++++showOther-Start++++++++++++++++++++++-->
+<div class="showOther">
+    <div class="showOtherCen">
+        <div class="showOtherLeft fl">
+            <h3>大家都在买</h3>
+            <div class="showLeftCon showLeftCon02" id="togetherBuy">
+            </div>
+            <h3 class="marTop_15">相关商品</h3>
+            <div class="showLeftCon showLeftCon02" id="relatedProduct">
+                <ul>
+                    <li class="showOtherli">
+                        <div class="sPic fl">
+                            <img src="images/detImage/smallo1.jpg" alt="">
+                        </div>
+                        <div class="sbox fr">
+                            <div class="sName">LEADERS/丽得姿 润美保湿补水修复面膜（10片装）韩国原装</div>
+                            <div class="sPri">
+                                <strong>
+                                    <span class="rmb">¥</span>109
+                                </strong>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="showOtherli">
+                        <div class="sPic fl">
+                            <img src="images/detImage/smallo1.jpg" alt="">
+                        </div>
+                        <div class="sbox fr">
+                            <div class="sName">LEADERS/丽得姿 润美保湿补水修复面膜（10片装）韩国原装</div>
+                            <div class="sPri">
+                                <strong>
+                                    <span class="rmb">¥</span>109
+                                </strong>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="showOtherli">
+                        <div class="sPic fl">
+                            <img src="images/detImage/smallo1.jpg" alt="">
+                        </div>
+                        <div class="sbox fr">
+                            <div class="sName">LEADERS/丽得姿 润美保湿补水修复面膜（10片装）韩国原装</div>
+                            <div class="sPri">
+                                <strong>
+                                    <span class="rmb">¥</span>109
+                                </strong>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="showOtherli">
+                        <div class="sPic fl">
+                            <img src="images/detImage/smallo1.jpg" alt="">
+                        </div>
+                        <div class="sbox fr">
+                            <div class="sName">LEADERS/丽得姿 润美保湿补水修复面膜（10片装）韩国原装</div>
+                            <div class="sPri">
+                                <strong>
+                                    <span class="rmb">¥</span>109
+                                </strong>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="showOtherli">
+                        <div class="sPic fl">
+                            <img src="images/detImage/smallo1.jpg" alt="">
+                        </div>
+                        <div class="sbox fr">
+                            <div class="sName">LEADERS/丽得姿 润美保湿补水修复面膜（10片装）韩国原装</div>
+                            <div class="sPri">
+                                <strong>
+                                    <span class="rmb">¥</span>109
+                                </strong>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="marTop_15">最近浏览的商品</h3>
+            <div class="showLeftCon showLeftCon02" id="lastBroswerProduct">
+            </div>
+        </div>
+
+        <div class="showOtherRight fr">
+            <div class="s-left-banner" style="display: none;"></div>
+            <div class="s-left-list" id="firstNav">
+                <ul>
+                    <li class="link-suit-select"><a href="javascript:;">商品详情</a></li>
+                    <li><a href="javascript:;">商品鉴定</a></li>
+                    <li><a href="javascript:;">售后服务</a></li>
+                    <li><a href="javascript:;">购买须知</a></li>
+                    <li class="secondCart">
+                        <a href="#" id="secondCart" class="to_cart" title="加入购物车">加入购物车</a>
+                    </li>
+                </ul>
+            </div>
+            <!--+++++++++++++++++++++产品详情图片+++++++++++++++++++++-->
+            <div class="s-left-box">
+                <div class="product-detail-div">
+                    <div class="product-detail-banner">
+                        <img src="images/detImage/zhcx_pic_1.jpg" alt="">
+                    </div>
+                    <div class="moudle_details">
+                        <div class="moudle_top">
+                            <span class="sp_cs">商品参数</span>
+                            <p>secoo.com</p>
+                        </div>
+                    </div>
+                    <div class="t-info">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                            <tr>
+                                <td class="ths" title="标准修身">
+                                    <div class="zxx_con">剪裁：标准修身</div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                                <td class="ths" title="棉">
+                                    <div class="zxx_con">材质：棉</div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                                <td class="ths" title="时尚休闲">
+                                    <div class="zxx_con">风格：时尚休闲</div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                                <td class="ths" title="突尼斯">
+                                    <div class="zxx_con">产地：突尼斯</div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ths" title="长袖">
+                                    <div class="zxx_con">袖型：长袖</div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                                <td class="ths" title="春夏">
+                                    <div class="zxx_con">适用季节：春夏</div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                                <td class="ths" title="扣领尖领">
+                                    <div class="zxx_con">领型：扣领尖领</div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                                <td class="ths">
+                                    <div class="zxx_con" title="阿玛尼卡尔兹">
+                                        品牌名称：
+                                        <a href="http://list.secoo.com/clothing/8-21-44-1166-0-1-0-0-1-10-0-0.shtml" title="阿玛尼卡尔兹" target="_blank">阿玛尼卡尔兹</a>
+                                    </div>
+                                    <div class="zxx_dotted">…</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="moudle_details">
+                        <div class="moudle_top">
+                            <span class="cm_show">尺码对照表</span>
+                            <p>secoo.com</p>
+                        </div>
+                        <img alt="男式衬衫" title="男式衬衫" src="images/detImage/detailsize01.jpg">
+                    </div>
+
+
+                    <div id="ppgsDiv" class="moudle_details">
+                        <div class="moudle_top">
+                            <span class="brand">品牌故事</span>
+                            <p>secoo.com</p>
+                        </div>
+                        <div class="moudle_center clearfix" style="border: 1px solid rgb(223, 223, 223);">
+                            <div class="brand-coll fl"><img src="images/detImage/detail0001.jpg" width="320" height="240"></div>
+                            <div class="brand-col2 fr">
+                                <div class="b-tit">ARMANI COLLEZIONI</div>
+                                <div class="b-con">
+                                    Armani Collezioni 作为阿玛尼 Armani 的另一个副牌，也是阿玛尼家族中最奢华的一员。Armani Collezioni 是意大利语，
+                                    翻译成英文就是Armani Collections。 在阿玛尼家族中，Armani Collezioni 是价格仅次于阿玛尼高定 Armani Prive 和乔治·阿玛尼 Giorgio Armani 的”贵族“，
+                                    顾客是不爱追逐潮流、注重高品质的成熟男性和女性。Armani Collezioni也被称为”阿玛尼黑标“(Armani black label)，只有在高级的连锁百货店Harrods、Harvey Nichols、David Jones、Saks 5th Avenue、Bloomingdales
+                                    以及 Neiman Marcus 里都可以购买到。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="moudle_details moudle_pho">
+                        <div class="moudle_top">
+                            <span class="sp_show">商品展示</span>
+                            <p>secoo.com</p>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+            <!--+++++++++++++++++++++comment-start+++++++++++++++++++++-->
+            <div class="detail_comment">
+                <div class="dc_title">
+                    <ul>
+                        <li class=""><a href="#" id="commentCount">该商品评价（0）</a></li>
+                        <li class="on"><a href="#" id="currentBrandCommentCount">同品牌评价（34）</a></li>
+                    </ul>
+                </div>
+
+                <div class="dc_cont dc_cont_none">
+                    <div class="dc_score">
+                        <div class="fl zhpf">综合评分</div>
+                        <i class="fl">|</i>
+                        <div class="fl star_d" id="commentSumCore">
+                            <!--<span class="star4">
+                                <em style="width:0">
+                                    <em></em>
+                                </em>
+                            </span>-->
+                        </div>
+                        <!--<div class="fl zhpf">暂无评价</div>
+                        <div class="fr">
+                            <a class="pl_btn_red" id="fbcomment" target="_blank" href="#">发表评价</a>
+                        </div>-->
+                    </div>
+                    <div class="dc_c_p1">
+                        <ul class="dc_c_t">
+                            <li class="on">
+                                <a href="#" id="allCommentCount">全部（34）</a>
+                            </li>
+                            <li>
+                                <a href="#" id="allImgCommentCount">有图评价（0）</a>
+                            </li>
+                        </ul>
+                        <div class="dc_list">
+                            <dl>
+                                <dt>
+                                <p>
+                                <img src="images/detImage/tx.jpg" width="50" height="50">
+                            </p>
+                                <p class="name">w***3</p>
+                                </dt>
+                                <dd>
+                                <div class="pl_detail">
+                                    <div class="d_pf clearfix">
+                                        <div class="fl star_d">
+                                            <span class="star4">
+                                                <em style="width:0">
+                                                    <em></em></em>
+                                            </span>4.0
+                                        </div>
+                                        <div class="fr">
+                                            <span class="pl_client">来自寺库Android客户端
+                                                <em><br>扫描二维码下载
+                                                </em>
+                                            </span>
+                                            <i>|</i>同品牌评价
+                                            <i>|</i>2016/05/17 10:20:16
+                                        </div>
+                                    </div>
+                                    <div class="d_cont">很好，样子新颖</div>
+                                    <div class="pl_photos"><div class="share_icon comment_share" style="display:none;">
+                                        <span class="share_t">
+                                            <a href="###">
+                                                <i></i>分享（0）
+                                            </a>
+                                        </span>
+                                        <div class="bdsharebuttonbox share_c" data-tag="share_1" onclick="shareComment(179897, this)">
+                                            <a class="bds_tsina" data-cmd="tsina"></a>
+                                            <a class="bds_sqq" data-cmd="sqq"></a>
+                                            <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+                                        </div>
+                                    </div>
+                                        <span class="pl_dianzan pl_dianzan1" onclick="">
+                                            <i></i>
+                                            <span id="praiseCount_179897">（0）
+                                            </span>
+                                            <em id="praise_179897" style="display:none">
+                                                <span></span>一个评价只能点一次赞哟!
+                                            </em>
+                                        </span>
+                                        <div class="pl_photos_d">
+                                            <div class="pl_photos_img">
+                                                <a class="img_prev" href="#">
+                                                    <i></i>
+                                                </a>
+                                                <a class="img_next" href="#">
+                                                    <i></i>
+                                                </a>
+                                                <div class="img_box">
+
+                                                </div>
+                                            </div>
+                                            <div class="pl_photos_t">
+                                                <a class="img_hide" href="">收起</a>|
+                                                <a class="img_turnleft" href="">向左旋转</a>|
+                                                <a class="img_turnright" href="">向右旋转</a>
+                                            </div>
+                                        </div>
+                                        <p class="pl_goodsxx">
+                                            <a href="#">ARMANI COLLEZIONI/阿玛尼卡尔兹男士衬衫-男士阿玛尼黑标棉质经典休闲衬衫</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </dd>
+                            </dl>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+            <!--+++++++++++++++++++++comment-end+++++++++++++++++++++-->
+
+        </div>
+    </div>
+</div>
+
+<!--+++++++++++++++++++++showOther-End++++++++++++++++++++++-->
+
+<!--++++++++++++++++++++++++++++++footer-Start+++++++++++++++++++++++++++++++-->
+
+<!--++++++++++++++++++++++++++++++footernav-Start+++++++++++++++++++++++++++++++-->
+<div class="footer">
+    <div class="footercen">
+        <div class="fnav">
+            <div class="fnav01 fl">
+                <span class="fnav01title dis-b">新手指南</span>
+                <a href="#" class="fava">注册新用户</a>
+                <a href="#" class="fava">网上订购流程</a>
+                <a href="#" class="fava">优惠券使用说明</a>
+                <a href="#" class="fava">海外站购买说明</a>
+                <a href="#" class="fava">美国站购买说明</a>
+            </div>
+
+
+            <div class="fnav02 fl">
+                <span class="fnav01title dis-b">付款方式</span>
+                <a href="#" class="fava">在线支付</a>
+                <a href="#" class="fava">库支付</a>
+                <a href="#" class="fava">银行汇款</a>
+                <a href="#" class="fava">货到付款</a>
+            </div>
+
+
+            <div class="fnav02 fl">
+                <span class="fnav01title dis-b">物流派送</span>
+                <a href="#" class="fava">管家派送</a>
+                <a href="#" class="fava">快递派送</a>
+                <a href="#" class="fava">到站自提</a>
+                <a href="#" class="fava">派送范围及时间</a>
+                <a href="#" class="fava">派送政策</a>
+            </div>
+
+            <div class="fnav04 fl">
+                <span class="fnav01title dis-b">售后服务</span>
+                <a href="#" class="fava">退换货说明</a>
+                <a href="#" class="fava">如何办理退款</a>
+                <a href="#" class="fava">售后服务保养手册</a>
+                <a href="#" class="fava">奢侈品养护服务</a>
+                <a href="#" class="fava">奢侈品拍卖置换</a>
+            </div>
+
+            <div class="fnav04 fl">
+                <span class="fnav01title dis-b">跨境体验店</span>
+                <span class="fnav01title dis-b fnav02t">寺库通过在全球多地设立体验店和办事机构的方式，为高端消费<br/>者提供贴心的全球奢侈品一站式服务</span>
+                <div class="fl" style="margin-right:60px;">
+                    <a href="#" class="fava">北京</a>
+                    <a href="#" class="fava">上海</a>
+                    <a href="#" class="fava ">成都</a>
+                </div>
+                <div class="fl">
+                    <a href="#" class="fava">香港</a>
+                    <a href="#" class="fava">米兰</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--++++++++++++++++++++++++++++++footerend-Start+++++++++++++++++++++++++++++++-->
+
+        <div class="promise">
+            <div class="promisecen">
+                <div class="propho real fl"></div>
+                <span class="dis-b fl realf">100%正品保证</span>
+
+
+
+                <div class="propho tui fl"></div>
+                <span class="dis-b fl realf">7天退换</span>
+
+
+
+                <div class="propho zhuan fl"></div>
+                <span class="dis-b fl realf">专业维修保养</span>
+
+
+
+                <div class="propho quan fl"></div>
+                <span class="dis-b fl realf">权威奢侈品鉴定</span>
+
+
+                <div class="propho tie fl"></div>
+                <span class="dis-b fl realf">贴心管家物流</span>
+            </div>
+        </div>
+
+
+        <div class="footerinfo">
+            <div class="footerinfocen">
+                <div class="footlink">
+                    <a href="#" class="footinfoa">寺库网</a>
+                    <a href="#" class="footinfoa">寺库奢侈品养护</a>
+                    <a href="#" class="footinfoa">寺库招商</a>
+                    <a href="#" class="footinfoa">寺库加盟店</a>
+                </div>
+
+                <div class="footlink">
+                    <span class="flp dis-b fl">专业执照注册号110102011888762</span>
+                    <a class="flp dis-b fl" href="#">
+                        <span class="dis-b fl flpimg"></span>
+                        <span>京公安备11010102001392</span>
+                    </a>
+                    <span class="flp">京ICP证110119号 京ICP备09084709号-3</span>
+                    <span class="flp">ISO9001中国质量管理体系认证</span>
+                </div>
+
+                <div class="footlink">
+                    <a href="#" class="footinfoa">加入寺库</a>
+                    <a href="#" class="footinfoa">关于我们</a>
+                    <a href="#" class="footinfoa">联系我们</a>
+                    <a href="#" class="footinfoa">帮助中心</a>
+                    <a href="#" class="footinfoa">寺库微博</a>
+                    <a href="#" class="footinfoa">友情链接</a>
+                    <a href="#" class="footinfoa">奢侈品热词</a>
+                    <a href="#" class="footinfoa">奢侈品资讯</a>
+                </div>
+
+                <div class="footlink">
+                    <span class="cspan">COPYRIGHT © 2010-2016 北京寺库商贸有限公司 版权所有</span>
+                </div>
+
+                <div class="footlink footphoes">
+                    <a href="#"><img src="images/f_01.jpg" alt=""></a>
+                    <a href="#"><img src="images/f_04.jpg" alt=""></a>
+                    <a href="#"><img src="images/cnnic.png" alt=""></a>
+                    <a href="#"><img src="images/kexin.jpg" alt=""></a>
+                    <a href="#"><img src="images/f_03.jpg" alt=""></a>
+                </div>
+
+                <div class="dis-b app">
+                    <img src="images/app_ewm0827.jpg" alt="">
+                    <p class="appp">手机客户端</p>
+                </div>
+
+                <div class="dis-b weixin">
+                    <img src="images/sk_ewm0827.jpg" alt="">
+                    <p class="appp">官方微信</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+<!--++++++++++++++++++++++++++++++footer-End+++++++++++++++++++++++++++++++-->
+
+
+
+
+
+
+
+</body>
+</html>

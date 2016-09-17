@@ -1,0 +1,36 @@
+@charset "utf-8";
+.top_1{ height:40px; line-height:40px; background-color:#6c3b72; width:100%;}
+.top_1 span{margin-left:20px;}
+.body_1{ width:100%; background-color:#352339; position:relative}
+.bd_2{ background:url(../images/bk_indexbg_02.png) center 0 no-repeat; width:100%; height:65px;}
+.bd_3{ background:url(../images/bk_indexbg_03.png) center 0 no-repeat; width:100%; height:43px;}
+.bd_4{ background:url(../images/bk_indexbg_04.png) center 0 no-repeat; width:100%; height:34px;}
+.bd_5{ background:url(../images/bk_indexbg_05.png) center 0 no-repeat; width:100%; height:30px;}
+.bd_6{ background:url(../images/bk_indexbg_06.png) center 0 no-repeat; width:100%; height:32px;}
+.bd_7{ background:url(../images/bk_indexbg_07.png) center 0 no-repeat; width:100%; height:38px;}
+.bd_8{ background:url(../images/bk_indexbg_08.png) center 0 no-repeat; width:100%; height:49px;}
+.bd_9{ background:url(../images/bk_indexbg_09.png) center 0 no-repeat; width:100%; height:58px;}
+.bd_10{ background:url(../images/bk_indexbg_10.png) center 0 no-repeat; width:100%; height:73px;}
+.bd_11{ background:url(../images/bk_indexbg_11.png) center 0 no-repeat; width:100%; height:86px;}
+.bd_12{ background:url(../images/bk_indexbg_12.png) center 0 no-repeat; width:100%; height:83px;}
+.bd_13{ background:url(../images/bk_indexbg_13.png) center 0 no-repeat; width:100%; height:76px;}
+.bd_14{ background:url(../images/bk_indexbg_14.png) center 0 no-repeat; width:100%; height:71px;}
+.bd_15{ background:url(../images/bk_indexbg_15.png) center 0 no-repeat; width:100%; height:90px;}
+.border_pos{ position:absolute; z-index:10; border-bottom:1px solid #635266; width:100%; height:1px; top:400px}
+.border_pos{ position:absolute; z-index:10; border-bottom:1px solid #635266; width:100%; height:1px; top:400px}
+.login_box{ position:absolute; width:357px; z-index:100; top:85px; left:38%;}
+.logo_png{ margin-bottom:40px;text-align: center}
+.login_inbox{ width:357px; height:300px; }
+.login_inbox_hd,.login_inbox_ft{ background:url(../images/index_com.png) no-repeat; height:7px; width:357px;}
+.login_inbox_hd{ background-position:0 0;}
+.login_inbox_ft{ background-position:0 -7px;}
+.login_inbox_bd{ height:335px; overflow:hidden; background-color:#FFF; color:#666;}
+.index_bord{ width:315px; height:35px; line-height:35px; background:url(../images/inptext_bg.png) left 0 no-repeat; overflow:hidden; margin:15px 0 0 20px}
+.index_bord input{ border:none; background:url(../images/inptext_bg.png) right bottom no-repeat; height:35px; line-height:35px;position: relative;top: -1px; float:right; width:220px;}
+.index_bord .nam_span{ margin-left:15px; float:left}
+.yzmText{ width:87px; height:34px; line-height:34px; background:url(../images/bck_pic.gif) 0 0 no-repeat; padding:0 2px; border:none; margin-right:5px;}
+.index_bord2{ margin:15px 0 0 20px}
+.index_bord2 a{ margin-left:5px;}
+.ljdr_button{ width:320px; height:40px; display:block; background-color:#fea102; color:#fff; font:bold 16px/40px Arial; text-align:center;margin:15px 0 0 18px;}
+.footDiv{ width:100%; height:50px; line-height:50px; background-color:#2e1f32;}
+.footDiv span{ margin-left:25px}

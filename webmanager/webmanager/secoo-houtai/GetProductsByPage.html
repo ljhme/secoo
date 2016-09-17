@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页获取多个商品</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/GetProductsByPage.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+
+
+
+<div class="dangqian">
+    <span class="home"></span><p>当前的位置>>商品管理>>添加商品>>商品信息</p>
+</div>
+<div id="div1">
+    <div class="sousuotu"></div>
+    <p class="search">搜索　>>　显示件数:</p>
+    <input type="text" id="txtsize">
+    <p class="search">显示哪页:</p>
+    <input type="text" id="txtindex">
+    <input type="button" id="select" value="查询">
+    <div id="productInfo">
+        <table class="table table-hover">　<!--bootsrap-->
+            <tr>
+                <td>商品编号</td>
+                <td>商品名称</td>
+                <td>商品价格</td>
+                <td>图片全称</td>
+                <td>商品描述</td>
+                <td>操作</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+
+    //通过分页获取多个商品信息
+
+    $("#select").click(function () {
+        var ajaxPageSize = $("#txtsize").val();   //页面显示商品件数记录
+        var ajaxPageIndex = $("#txtindex").val(); //显示第几页
+
+        /*$.ajax({
+         url: ajaxUrl,
+         data: {
+         pagesize:ajaxPageSize,
+         pageindex:ajaxPageIndex
+         },
+         success:function (returnData) {   //jQuery关于ajax返回获取值的回调函数
+         //console.log(returnData);
+         //console.log(typeof(returnData));  //string,需要转换成对象
+         //参数returnData的值：
+         // /[{"Id":"11","Data":"{\"id\":\"11\",\"name\":\"gao\",\"price\":\"12\",\"imgSrc\":\"1.jpg\"}"},
+         // {"Id":"1","Data":"1231312123"},
+         // {"Id":"100","Data":"{\"id\":\"100\",\"name\":\"100\",\"price\":\"100\",\"imgsrc\":\"100.jpg\"}"}]
+
+
+         var Opro = document.getElementById("productInfo");
+
+
+
+         var jsonData = JSON.parse(returnData);  //转换为json对象
+         //console.log(jsonData);   //[Object, Object, Object]
+         for(var i=0;i<jsonData.length;i++){
+         //console.log(jsonData[i].Id);
+         var data = jsonData[i].Data;
+         //console.log(data);    //{"id":"11","name":"gao","price":"12","imgSrc":"1.jpg"}
+         //console.log(typeof(data));  //string,需要转换成为对象
+         var datas = JSON.parse(data);  //转换为对象
+         createLIst(i);
+         //console.log(datas.id+"-----"+datas.name+"----"+datas.price);
+         }
+
+         //参数index是为第i个商品添加操作
+         function createLIst(index) {  //动态创建显示要显示商品信息的载体，并把获取到的信息渲染到上面
+         for(var i=0;i<6;i++){
+         var p = document.createElement("p");
+         if(i==0){
+         p.innerHTML = datas.id;
+         Opro.appendChild(p);
+         }else if(i==1){
+         p.innerHTML = datas.name;
+         Opro.appendChild(p);
+         }else if(i==2){
+         p.innerHTML = datas.price;
+         Opro.appendChild(p);
+         }else if(i==3){
+         p.innerHTML = datas.imgsrc;
+         Opro.appendChild(p);
+         }else if(i==4){
+         p.innerHTML = datas.describe;
+         Opro.appendChild(p);
+         }else{
+         p.className = "caozuo"+index;
+         p.innerHTML = "";
+         Opro.appendChild(p);
+         //console.log(p.className);
+         createCaozuo(p.className,datas.id);
+         }
+         }
+
+         }
+
+
+         //参数className是将第i个商品操作的className传递过去
+         function createCaozuo(cassName,productId) {   //动态创建操作以及操作的事件
+         console.log(productId);
+         var span1 = document.createElement("span");
+         span1.innerHTML = "修改  ";
+         span1.style.cursor="pointer";
+         span1.style.color="#8A2BE2";
+         span1.onclick = function () {   //修改操作
+         window.location.href="CreateUpdateProduct.html";
+         }
+         $("."+cassName).append(span1);
+         var span2 = document.createElement("span");
+         span2.innerHTML = "删除";
+         span2.style.cursor="pointer";
+         span2.style.color="red";
+         span2.onclick = function () {   //删除操作
+         deleteProductById(productId);
+
+         }
+         $("."+cassName).append(span2);
+         }
+
+
+         function deleteProductById(productId) {   //删除商品，通过id
+         //ajax;
+         var ajaxUrl = "../product/DeleteProductById_get";
+         var ajaxId = productId;
+         console.log(ajaxId);
+         $.ajax({
+         url: ajaxUrl,
+         data: {
+         id: ajaxId,
+         },
+         success:function (returnData) {
+         if(returnData==1){
+         console.log("删除成功！");
+         }else{
+         console.log("删除失败！");
+         }
+         }
+         });
+         }
+
+
+         }
+         });*/
+
+        getProducts(ajaxPageSize,ajaxPageIndex);
+
+    });
+
+
+
+    function getProducts(ajaxPageSize,ajaxPageIndex) {   //获取商品
+        //ajax;
+        var ajaxUrl = "../product/GetProductsByPage_get";
+        $.ajax({
+            url: ajaxUrl,
+            data: {
+                pagesize:ajaxPageSize,
+                pageindex:ajaxPageIndex
+            },
+            success:function (returnData) {   //jQuery关于ajax返回获取值的回调函数
+                //console.log(returnData);
+                //console.log(typeof(returnData));  //string,需要转换成对象
+                //参数returnData的值：
+                // /[{"Id":"11","Data":"{\"id\":\"11\",\"name\":\"gao\",\"price\":\"12\",\"imgSrc\":\"1.jpg\"}"},
+                // {"Id":"1","Data":"1231312123"},
+                // {"Id":"100","Data":"{\"id\":\"100\",\"name\":\"100\",\"price\":\"100\",\"imgsrc\":\"100.jpg\"}"}]
+
+                var jsonData = JSON.parse(returnData);  //转换为json对象
+                //console.log(jsonData);   //[Object, Object, Object]
+                for(var i=1;i<jsonData.length;i++){
+                    //console.log(jsonData[i].Id);
+                    var data = jsonData[i].Data;
+                    //console.log(data);    //{"id":"11","name":"gao","price":"12","imgSrc":"1.jpg"}
+                    //console.log(typeof(data));  //string,需要转换成为对象
+                    var datas = JSON.parse(data);  //转换为对象
+                    createLIst(i);
+                    //console.log(datas.id+"-----"+datas.name+"----"+datas.price);
+                }
+
+                //参数index是为第i个商品添加操作
+                function createLIst(index) {  //动态创建显示要显示商品信息的载体，并把获取到的信息渲染到上面
+                    $("<tr></tr>").appendTo(".table").addClass("trone"+index);
+                    for(var i=0;i<6;i++){
+                        if(i==0){
+                            $("<td></td>").appendTo(".trone"+index).text(datas.id);
+                        }else if(i==1){
+                            $("<td></td>").appendTo(".trone"+index).text(datas.name);
+                        }else if(i==2){
+                            $("<td></td>").appendTo(".trone"+index).text(datas.price);
+                        }else if(i==3){
+                            $("<td></td>").appendTo(".trone"+index).text(datas.imgsrc);
+                        }else if(i==4){
+                            $("<td></td>").appendTo(".trone"+index).text(datas.describe);
+                        }else{
+                            $("<td></td>").appendTo(".trone"+index).addClass("caozuo"+index).text("");
+                            //console.log("caozuo"+index);
+                            createCaozuo("caozuo"+index,datas.id,"trone"+index);
+                        }
+                    }
+
+                }
+
+
+                //参数className是将第i个商品操作的className传递过去
+                function createCaozuo(cassName,productId,trClass) {   //动态创建操作以及操作的事件
+                    //console.log(cassName);
+                    //console.log(productId);
+                    $("<span></span>").text("修改　").css({
+                        cursor:"pointer",
+                        color:"#8A2BE2",
+                    }).appendTo("."+cassName).click(function () {     //修改操作
+                        window.location.href="updateProducts.html?id="+productId;
+                    });
+
+                    $("<span></span>").text("删除").css({
+                        cursor:"pointer",
+                        color:"red",
+                    }).appendTo("."+cassName).click(function () {   //删除操作
+                        deleteProductById(productId);
+                        $("."+trClass).empty();
+                    });
+                }
+
+
+                function deleteProductById(productId) {   //删除商品，通过id
+                    //ajax;
+                    var ajaxUrl = "../product/DeleteProductById_get";
+                    var ajaxId = productId;
+                    console.log(ajaxId);
+                    $.ajax({
+                        url: ajaxUrl,
+                        data: {
+                            id: ajaxId,
+                        },
+                        success:function (returnData) {
+                            if(returnData==1){
+                                console.log("删除成功！");
+                            }else{
+                                console.log("删除失败！");
+                            }
+                        }
+                    });
+                }
+
+
+            }
+        });
+    }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+  {
+    "imgSrc":"details-01.jpg"
+  },
+  {
+    "imgSrc":"details-02.jpg"
+  },
+  {
+    "imgSrc":"details-03.jpg"
+  },
+  {
+    "imgSrc":"details-04.jpg"
+  },
+  {
+    "imgSrc":"details-05.jpg"
+  },
+  {
+    "imgSrc":"details-06.jpg"
+  },
+  {
+    "imgSrc":"details-07.jpg"
+  }
+]
